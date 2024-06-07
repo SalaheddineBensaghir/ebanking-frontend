@@ -36,4 +36,13 @@ this.customers=this.customerService.searchCustomers(kw).pipe(
 );
   }
 
+  handleDeleteCustomer(c: Customer) {
+    this.customerService.deleteCustomer(c.id).subscribe({
+      next : (resp) => {
+        this.handleSearchCustomers();
+      },error :err => {
+        console.log(err);
+      }
+    })
+  }
 }

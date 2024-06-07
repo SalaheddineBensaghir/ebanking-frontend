@@ -9,3 +9,5 @@
 <h4>Ajouter un customers: </h4>
 <img src="image/tp front8.png"/>
 <img src="image/tp front9.png"/>
+<h4>Supprimer un customers :</4>
+<img src="image/supp front10.png">
