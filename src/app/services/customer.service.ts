@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Customer} from "../model/customer.model";
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -15,5 +16,8 @@ backendHost : string="http://localhost:8085";
   }
   public searchCustomers(keyword : string):Observable<Array<Customer>>{
     return this.http.get<Array<Customer>>(this.backendHost+"/customers/search?keyword="+keyword);
+  }
+  public saveCustomer(customer : Customer):Observable<Customer>{
+    return this.http.post<Customer>(this.backendHost+"/customers",customer);
   }
 }

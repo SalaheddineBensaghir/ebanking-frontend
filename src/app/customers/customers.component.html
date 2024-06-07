@@ -5,12 +5,14 @@
 
     <div class="card-header">Customers</div>
     <div class="card-body">
-      {{this.searchformGroup.value | json}}
+<!--      {{this.searchformGroup.value | json}}-->
       <form [formGroup]="searchformGroup" (ngSubmit)="handleSearchCustomers()">
 <div class="input-group">
   <label class="input-group-text">keyword</label>
   <input type="text" formControlName="keyword" class="form-control">
-  <button class="btn btn-info">Search</button>
+  <button class="btn btn-info">
+    <i class="bi bi-search"></i>
+  </button>
 </div>
       </form>
       <table class="table">
