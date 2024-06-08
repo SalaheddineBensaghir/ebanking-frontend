@@ -4,7 +4,7 @@ export interface AccountDetails{
   currentPage : number,
   totalPage: number,
   pageSize : number,
-  accountOperation : AccountOperations[]
+  accountOperationDTOS : AccountOperations[]
 }
 
 

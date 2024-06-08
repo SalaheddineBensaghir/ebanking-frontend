@@ -11,3 +11,6 @@
 <img src="image/tp front9.png"/>
 <h4>Supprimer un customers :</4>
 <img src="image/supp front10.png">
+<img src="image/tp front11.png">
+<h4>Consulter les operations de compte :</4>
+<img src="image/tp front12.png">

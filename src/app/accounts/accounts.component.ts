@@ -15,12 +15,18 @@ export class AccountsComponent implements OnInit{
   currentPage : number=0;
   pageSize : number=5;
   accountObservable !: Observable<AccountDetails>;
+  operationFromGroup !: FormGroup;
   constructor(private fb : FormBuilder,private  accountService: AccountsService) {
   }
 
   ngOnInit(): void {
     this.accountFormGroup=this.fb.group({
       accountId : this.fb.control('')
+    });
+    this.operationFromGroup=this.fb.group({
+      operationType : this.fb.control(null),
+      amount : this.fb.control(0),
+      description : this.fb.control(null)
     })
   }
 
@@ -30,5 +36,11 @@ export class AccountsComponent implements OnInit{
   handleSearchAccount() {
     let accountId : string = this.accountFormGroup.value.accountId;
 this.accountObservable= this.accountService.getAccount(accountId,this.currentPage,this.pageSize);
+  }
+
+  gotoPage(page: number) {
+    this
+      .currentPage=page;
+    this.handleSearchAccount();
   }
 }
