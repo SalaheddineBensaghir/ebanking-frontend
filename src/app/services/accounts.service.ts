@@ -23,7 +23,7 @@ export class AccountsService {
     return this.http.post(this.backendHost+"/account/credit",data);
   }
   public transfer(accountSource: string,accountDestination: string,amount:number,description : string) {
-    let data={accountSource: accountSource,accountDestination:accountDestination,amount:amount,description:description}
+    let data={accountSource,accountDestination,amount,description}
     return this.http.post(this.backendHost+"/account/transfer",data);
   }
 }

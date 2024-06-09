@@ -5,6 +5,7 @@ import {catchError, map, Observable, throwError} from "rxjs";
 import {Customer} from "../model/customer.model";
 import {error} from "@angular/compiler-cli/src/transformers/util";
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-customers',
@@ -16,7 +17,7 @@ export class CustomersComponent implements OnInit{
   errorMessage!: string;
   searchformGroup!: FormGroup;
 
-  constructor(private customerService:CustomerService,private fb : FormBuilder) {
+  constructor(private customerService:CustomerService,private fb : FormBuilder,private router: Router) {
   }
 
   ngOnInit(): void{
@@ -53,5 +54,9 @@ this.customers=this.customerService.searchCustomers(kw).pipe(
         console.log(err);
       }
     })
+  }
+
+  handleCustomerAccounts(c: Customer) {
+    this.router.navigateByUrl("/customer-accounts/"+c.id,{state:c});
   }
 }
