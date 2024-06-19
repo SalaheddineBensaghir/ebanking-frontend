@@ -1,6 +1,6 @@
 <h1>E-Banking Backend :</h1>
 
-<h3>La partie Front avec Angular: </h3>
+<h3>**** La partie Front avec Angular: ****</h3>
 
 <h4>Consulter tout les customers : </h4>
 <img src="image/Tp front1.png"/>
@@ -16,11 +16,16 @@
 <img src="image/tp front12.png">
 <h4>Ajouter un operations :</4>
 <img src="image/tp front14.png">
-<h3>Security : </h3>
+<h3>**** Security : ****</h3>
 <img src="image/login 1.png">
 <img src="image/sec 1.png">
 <img src="image/sec 2.png">
 <img src="image/sec 3.png">
 <img src="image/sec 4.png">
 <img src="image/sec 5.png">
+
+<h3>**** Edite Customer : ****</h3>
+<img src="image/ajout 1.png">
+<img src="image/ajout 2.png">
+<img src="image/ajout 3.png">
 

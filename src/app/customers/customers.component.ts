@@ -59,4 +59,10 @@ this.customers=this.customerService.searchCustomers(kw).pipe(
   handleCustomerAccounts(c: Customer) {
     this.router.navigateByUrl("/customer-accounts/"+c.id,{state:c});
   }
+
+  handleEdite(customer: Customer) {
+    this.router.navigateByUrl(`/admin/editCustomer/${customer.id}`)
+  }
+
+
 }

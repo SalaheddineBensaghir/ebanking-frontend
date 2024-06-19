@@ -23,4 +23,10 @@ backendHost : string="http://localhost:8085";
   public deleteCustomer(id : number){
     return this.http.delete(this.backendHost+"/customers/"+id);
   }
+  public updateCustomer(customer: Customer):Observable<Customer>{
+    return  this.http.put<Customer>(`${this.backendHost}/customers/${customer.id}`,customer)
+  }
+  getCustomerById(customerId: number): Observable<Customer> {
+    return  this.http.get<Customer>(`${this.backendHost}/customers/${customerId}`);
+  }
 }
